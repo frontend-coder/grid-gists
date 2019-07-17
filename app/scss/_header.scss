@@ -1,0 +1,42 @@
+
+.header_fon {
+ min-height: 700px;
+ display: grid;
+justify-content: center;
+align-items: center;
+ position: relative;
+ padding-bottom: 200px;
+}
+
+.header_fon:before {
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(25deg, orange, #996300);
+    background: -o-linear-gradient(25deg, orange, #996300);
+    background: linear-gradient(65deg, orange, #996300);
+    border-radius: 0 0 50% 50% / 0 0 50% 50%;
+    opacity: .8;
+    z-index: -1;
+    transform: scaleX(1.4);
+    z-index: 1;
+    content: '';
+}
+
+.header_fon_content {
+color:#000;
+z-index: 1;
+text-align: center;
+}
+.header_fon_content h1 {
+color:#000;
+}
+
+
+
+
+
+
+
