@@ -1,0 +1,75 @@
+
+
+
+
+.portfolio_block11 {
+display: grid;
+ grid-template-columns:repeat(4,[col] 1fr);
+ grid-template-rows:repeat(7,[row] minmax(200px, auto));
+ // grid-auto-rows: minmax(300px, auto);
+//grid-template-columns:1fr;
+//grid-template-rows:30vh;
+//height: 100vh;
+//rid-colum
+grid-gap: 5px 45px;
+ grid-template-areas:
+      "first two third foure"
+      "first five six  foure"
+      "seven five six  ten"
+      "seven eight nine ten"
+      "thertin eight  eleven twelve";
+color:#fff;
+font-size: 20px;
+font-weight: bold;
+
+//grid-auto-flow: row dense;
+//grid-auto-flow: column;
+}
+.portfolio_items11 {
+	background-size: cover;
+}
+.portfolio_items11 span {
+	display: inline;
+	background-color: orange;
+}
+.portfolio_items11:nth-child(1) {
+	grid-area: first;
+}
+.portfolio_items11:nth-child(2) {
+	grid-area: two;
+}
+.portfolio_items11:nth-child(3) {
+	grid-area: third;
+}
+.portfolio_items11:nth-child(4) {
+	grid-area: foure;
+}
+.portfolio_items11:nth-child(5) {
+	grid-area: five;
+}
+.portfolio_items11:nth-child(6) {
+	grid-area: six;
+}
+.portfolio_items11:nth-child(7) {
+	grid-area: seven;
+}
+.portfolio_items11:nth-child(8) {
+	grid-area: eight;
+}
+.portfolio_items11:nth-child(9) {
+	grid-area: nine;
+}
+.portfolio_items11:nth-child(10) {
+	grid-area: ten;
+}
+.portfolio_items11:nth-child(11) {
+	grid-area: eleven;
+}
+.portfolio_items11:nth-child(12) {
+	grid-area: twelve;
+}
+.portfolio_items11:nth-child(13) {
+	grid-area: thertin;
+}
+
+
