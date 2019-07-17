@@ -1,0 +1,245 @@
+//Position, если высота известна
+// html, body {
+//     width: 100%;
+//     height: 100%;
+// }
+
+.mother_block {
+ width: 100%;
+ min-height: 100vh;
+ position: relative;
+ border:1px solid red;
+}
+
+
+//html, body {
+//    width: 100%;
+//    height: 100%;
+//}
+.mother_block_child{
+ width: 200px;
+ height: 300px;
+ background-color: #ff0;
+ position: absolute;
+ left:0;
+ right:0;
+ margin: 0 auto;
+ top:calc(50% - 150px);
+}
+
+.mother_block_child img{
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+// верхний способ работает только когда родитель html, body
+// или контейнеру задана минимальная высота или высота
+
+
+//Position, если высота не известна
+// html, body {
+//     width: 100%;
+//     height: 100%;
+// }
+// .box {
+//    width: 200px;
+//    background-color: #ff0;
+//    position: absolute;
+//    left:0;
+//    right:0;
+//    margin: 0 auto;
+//    top:50%;
+//    transform:translate(0, -50%);
+// }
+
+
+.mother_block_2 {
+ width: 100%;
+ height: 100vh;
+ position: relative;
+ border:1px solid red;
+}
+.mother_block_2_child {
+  width: 200px;
+  background-color: red;
+  position: absolute;
+  left:0;
+  right:0;
+  margin: 0 auto;
+  top:50%;
+  transform:translate(0, -50%);
+
+}
+
+//Использование псевдо-элемента
+
+// html, body {
+//     width: 100%;
+//     height: 100%;
+// }
+
+.parent_wraper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  border:1px solid blue;
+
+}
+.parent {
+ position: absolute;
+ border:1px solid red;
+ top:0;
+ left:0;
+ text-align: center;
+ width: 100%;
+ height: 100%;
+ font-size:0;
+}
+.parent::before {
+ content:'';
+ display: inline-block;
+ vertical-align: middle;
+ height: 100%;
+}
+.block_into {
+ display: inline-block;
+ vertical-align: middle;
+}
+
+
+
+//CSS Flexbox (блок растянут полностью)
+
+.flex_parent {
+ background-color: #222;
+ color:#fff;
+ display: flex;
+ justify-content:center;
+ align-items:center;
+ height: 100%;
+}
+
+
+.flex_center img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+}
+
+
+
+.flex_wraper {
+  width: 100%;
+  //  height: 100%;
+  min-height: 100vh;
+  border:1px solid #222;
+  position: relative;
+}
+
+.flex_wraper_center {
+ background-color: #222;
+ color:red;
+ display: flex;
+ justify-content:center;
+ align-items:center;
+ height: 400px;
+ max-width: 400px;
+ position: absolute;
+ top: calc(50% - 200px);
+ left:0;
+ right:0;
+ margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+// CSS Grid
+.grid_wraper {
+ display: grid;
+ min-height: 100vh;
+ justify-items:center;
+ align-items:center;
+ height: 100%;
+ background-color: #222;
+ color:#fff;
+}
+// Table & Table-cell center block
+html, body {
+  width: 100%;
+  height: 100%;
+}
+.table {
+ display: table;
+ height: 100%;
+ width: 100%;
+ border:1px solid red;
+}
+.table_item {
+ display: table-cell;
+ vertical-align: middle;
+ text-align:center;
+}
+
+
+.future_wrap {
+  display: flex;
+
+}
+
+.future_wrap_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.0rem;
+  border:1px solid gray;
+  width: 10%;
+}
+
+.future_wrap_text {
+  width: 90%;
+  font-size: 1.2rem;
+  border:1px solid blue;
+  padding: 5px;
+}
+.block_black {
+  border:2px solid #000;
+  background-color: gray;
+}
+.price_wrapper {
+display: flex;
+flex-wrap: wrap;
+
+//flex-direction: column;
+justify-content: flex-end;
+justify-content: space-between;
+//justify-content: center;
+//height: 400px;
+min-height: 50vh;
+//justify-content: center;
+//align-content: center;
+//align-items: center;
+//align-content: center;
+align-content: center;
+align-content: flex-start;
+//align-content: space-around;
+//align-items: flex-start;
+align-items: center;
+//height: 100px;
+border:1px solid red;
+}
+
+.price_wrapper_items {
+ width: 30%;
+  border:1px solid red;
+  margin:5px;
+  padding: 10px;
+}
+
