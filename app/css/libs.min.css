@@ -542,22 +542,28 @@ body input:required:valid, body textarea:required:valid {
 
 .grid_ones {
   display: grid;
-  border: 1px solid red;
-  grid-template-columns: 35% 15% 400px auto;
-  grid-gap: 1rem;
+  border: 1px solid MediumSpringGreen;
+  grid-template-columns: 35% 15% 387px auto;
+  grid-gap: 0.5rem;
 }
 
 .grid_ones_items {
   padding: 10px;
   background-color: brown;
   border: 1px solid orange;
+  color: #fff;
+}
+
+.grid_ones_items:nth-child(2n+2) {
+  color: #000;
 }
 
 .grid_twos {
+  width: 100%;
   display: grid;
   border: 1px solid red;
-  grid-template-columns: 35% 15% 400px auto;
-  grid-gap: 1rem;
+  grid-template-columns: 33% 15% 38% 11%;
+  grid-gap: 1%;
 }
 
 .grid_twos_items {
@@ -572,7 +578,7 @@ body input:required:valid, body textarea:required:valid {
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 250px;
   grid-auto-rows: minmax(250px, auto);
-  grid-gap: 1rem;
+  grid-gap: .5rem;
 }
 
 .grid_trys_items {
@@ -584,8 +590,7 @@ body input:required:valid, body textarea:required:valid {
 .grid_fifth {
   display: grid;
   border: 1px solid red;
-  grid-template-columns: repeat(4, 200px);
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 20%);
   grid-template-rows: auto;
   grid-gap: 1rem;
   justify-items: end;
@@ -728,6 +733,56 @@ body input:required:valid, body textarea:required:valid {
 
 .grid {
   display: grid;
+}
+
+.check_grid_one {
+  display: grid;
+  border: 1px solid purple;
+  padding: 10px;
+  grid-template-columns: repeat(4, -webkit-calc(25% - (1 * 10px)));
+  grid-template-columns: repeat(4, calc(25% - (1 * 10px)));
+  grid-auto-rows: 1fr;
+  grid-gap: 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+}
+
+.check_grid_one_item {
+  padding: 10px;
+  border: 1px dashed blue;
+}
+
+.check_grid_one_item:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.check_grid_one_item:nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.check_grid_one_item:nth-child(4) {
+  grid-column: span 1;
+  grid-row: span 3;
+  background-color: #A44F3D;
+}
+
+.check_grid_one_item:nth-child(5) {
+  grid-column: span 1;
+  grid-row: span 3;
+  background-color: #FF5733;
+}
+
+.check_grid_one_item:nth-child(7) {
+  grid-column: span 1;
+  grid-row: span 2;
+  background-color: #A42E15;
 }
 
 .block {
