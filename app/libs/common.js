@@ -16,6 +16,58 @@ $(document).ready(function () {
 	});
 
 
+var groups = {};
+$('.block_portfolio_items a').each(function() {
+  var id = parseInt($(this).attr('data-group'), 10);
+  if(!groups[id]) {
+    groups[id] = [];
+  }
+  groups[id].push( this );
+});
+$.each(groups, function() {
+  $(this).magnificPopup({
+      type: 'image',
+      closeOnContentClick: true,
+      closeBtnInside: false,
+      gallery: { enabled:true }
+  })
+});
+
+
+var groupsOne = {};
+$('.masonry_link').each(function() {
+  var id = parseInt($(this).attr('data-group'), 10);
+  if(!groupsOne[id]) {
+    groupsOne[id] = [];
+  }
+  groupsOne[id].push( this );
+});
+$.each(groupsOne, function() {
+  $(this).magnificPopup({
+      type: 'image',
+      closeOnContentClick: true,
+       tClose: 'Закрыть(Esc)',
+    fixedContentPos: false,
+  fixedBgPos:false,
+      closeBtnInside: false,
+      gallery: { enabled:true,
+   tPrev: 'Вперед (левая стрелка key)', // Alt text on left arrow
+    tNext: 'Назад (правая стрелка key)', // Alt text on right arrow
+    tCounter: '%curr% из %total%' // Markup for "1 of 7" counter
+
+
+       }
+  })
+});
+
+
+
+var msnry = new Masonry( '.grid_masonry', {
+  // options
+});
+
+
+
 
 
 	//Ajax push mesege http://api.jquery.com/jquery.ajax/
