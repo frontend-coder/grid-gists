@@ -4381,6 +4381,14 @@ body input:required:valid, body textarea:required:valid {
   grid-row-end: 7;
 }
 
+.block_title {
+  margin-bottom: 0;
+}
+
+.block {
+  padding: 25px 0;
+}
+
 .portfolio_block2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -5091,7 +5099,8 @@ body input:required:valid, body textarea:required:valid {
   color: #fff;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -5187,7 +5196,7 @@ html, body {
   --color1: #FFF;
   --color2: #00ffff;
   --color3: #444;
-  --blend-color:rgba(26,8,0,0.75);
+  --blend-color: rgba(26, 8, 0, 0.75);
   /*MODULE VARIABLES
 	 		============================*/
   --nav-block: #b2c2bf;
@@ -5428,7 +5437,7 @@ html, body {
 }
 
 .col-lg-4 {
-  width: 33.33333333%;
+  width: 32.75%;
 }
 
 .thumbnail {
@@ -5594,6 +5603,10 @@ html, body {
   z-index: 2;
   font-size: 0.875rem;
   opacity: 0.5;
+}
+
+.gallery_li li:hover figcaption {
+  opacity: 1;
 }
 
 @media (min-width: 480px) {
@@ -5964,18 +5977,56 @@ button.mfp-close, button.mfp-arrow {
   grid-template-columns: repeat(3, minmax(200px, 1fr));
   grid-template-rows: repeat(3, minmax(200px, 1fr));
   grid-gap: 20px;
+  border: 1px solid red;
+  grid-template-areas: "first first two" "three foure foure" "three five six";
 }
 
 .simple_masonry_item_two:nth-child(1) {
-  grid-column: span 2;
+  grid-area: first;
 }
 
 .simple_masonry_item_two:nth-child(3) {
-  grid-row: span 2;
+  grid-area: three;
 }
 
 .simple_masonry_item_two:nth-child(4) {
-  grid-column: span 2;
+  grid-area: foure;
+}
+
+.simple_masonry_three {
+  display: grid;
+  grid-template-columns: repeat(3, [col] minmax(200px, 1fr));
+  grid-template-rows: repeat(3, [row] minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.simple_masonry_item_three:nth-child(1) {
+  grid-column: col 1 / col 3;
+  grid-row: row 1 / row 2;
+}
+
+.simple_masonry_item_three:nth-child(2) {
+  grid-column: col 3 / col 4;
+  grid-row: row 1 / row 2;
+}
+
+.simple_masonry_item_three:nth-child(3) {
+  grid-column: col 1 / col 2;
+  grid-row: row 2 / row 4;
+}
+
+.simple_masonry_item_three:nth-child(4) {
+  grid-column: col 2 / col 4;
+}
+
+.simple_masonry_item_three:nth-child(5) {
+  grid-column: col 2 / col 3;
+  grid-row: row 3 / row 4;
+}
+
+.simple_masonry_item_three:nth-child(6) {
+  grid-column: col 3 / col 4;
+  grid-row: row 3 / row 4;
 }
 
 .footer_wrap {

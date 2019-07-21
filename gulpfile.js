@@ -54,7 +54,7 @@ const iconfontCss = require('gulp-iconfont-css');
 const runTimestamp = Math.round(Date.now()/1000);
 
 // переменая которая контролирует создание (true) или отключение (false) карты кода в файле
-const isDevelopmant     = true;
+const isDevelopmant = true;
 
 gulp.task('serve', done => {
   browserSync.init({
@@ -83,7 +83,7 @@ gulp.task('styles', () => {
       return error.message;
     }})
  }))
-  .pipe(sourcemaps.init())
+  .pipe(sourcemaps.init({largeFile: true}))
   .pipe(sass({ outputStyle: 'expanded' }))
 .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade:true}))
 .pipe(concat('libs.css'))
@@ -91,7 +91,7 @@ gulp.task('styles', () => {
 //.pipe(cleancss( {level: { 2: { specialComments: 0 } } })) // Opt., comment out when debugging
 .pipe(filesize()).on('error', gulpUtil.log)
 .pipe(sourcemaps.write(''))
-.pipe(notify("Create file: <%= file.relative %>!"))
+//.pipe(notify("Create file: <%= file.relative %>!"))
 .pipe(gulp.dest('app/css'));
 });
 
@@ -153,15 +153,16 @@ gulp.task('rsync', function() {
 });
 
 // npm install --save-dev gulp-ftp vinyl-ftp
-//FTP: ftp://vh146.timeweb.ru
-//Логин: cc63120
-//Пароль: j7X4Y36Od5Zm
+//FTP: ftp://vh210.timeweb.ru
+//Логин: cf17814
+//Пароль: SoPimw1PT0mo
+
 
 gulp.task( 'ftp', function () {
   var conn = vinyFTP.create( {
-   host:     'vh116.timeweb.ru',
-   user:     'cx76534',
-   password: 'PowO7q2Qcv2Y',
+   host:     'vh210.timeweb.ru',
+   user:     'cf17814',
+   password: 'SoPimw1PT0mo',
    parallel: 10,
    log:      gulpUtil.log
  } );

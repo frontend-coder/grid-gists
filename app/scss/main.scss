@@ -70,6 +70,12 @@ body {
 @import "header";
 @import "gridfirst";
 @import "gridone";
+.block_title {
+    margin-bottom: 0;
+}
+.block {
+    padding: 25px 0 ;
+}
 @import "gridtwo";
 @import "gridtry";
 @import "gridfour";
