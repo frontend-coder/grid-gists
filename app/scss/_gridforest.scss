@@ -295,7 +295,7 @@ margin: 10px 0 10px 0;
 }
 
 .masonry > div {
-	flex: 1 1 15%;
+background-size: cover;
 	margin: 0.5rem;
 	min-height: 30vmin;
 	display: flex;
@@ -305,16 +305,20 @@ margin: 10px 0 10px 0;
 
 }
 
-
+.masonry div:nth-child(3n+1) {
+	flex: 1 1 15%;
+}
 
 .masonry div:nth-child(3n+2) {
       flex: 2 1 20%;
 }
 .masonry div:nth-child(3n+3) {
-	flex-grow: 4;
+  flex: 2 1 27%;
 }
 
-
+.masonry div:nth-child(3n+4) {
+  flex: 2 1 calc(100% -27% - 20% - 15%);
+}
 
 
 .masonry > * img {
